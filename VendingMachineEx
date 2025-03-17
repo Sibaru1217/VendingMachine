@@ -1,0 +1,28 @@
+package ch0313.hw01;
+
+import java.util.Scanner;
+
+public class VendingMachineEx {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		VendingMachine vendingMachine = new VendingMachine();
+
+		vendingMachine.showMenu();
+		System.out.println("----------------");
+		System.out.println("돈을 넣어주세요");
+
+		int money = Integer.parseInt(sc.nextLine());
+		vendingMachine.insertMoney(money);
+
+	
+			System.out.print("구매할 음료를 골라주세요");
+			String product = sc.nextLine();
+			vendingMachine.selectProduct(product);
+
+			// System.out.println("음료를 더 고르신다면 1번 거스름돈을 반환하신다면 2번을 골라주세요"); // 1번과 2번 으로
+			// 구현해야함
+			vendingMachine.returnChange(); // 거스름돈 반환 명령어
+		
+	}
+}
+
